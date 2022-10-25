@@ -1,0 +1,20 @@
+user has no tweets => response.data is None,
+             response.meta["result_count"] = 0
+             TODO: return empty array
+
+private_profile => response.data is None,
+                   response.errors[0]["title"] = "Authorization Error"
+                   response.meta = {}
+                   TODO: raise private profile exception
+
+incorrect_username => response.data is None
+                      response.errors[0]["title"] = "Not Found Error"
+                      response.meta = {}
+                      TODO: raise invalid username exception
+
+running script without proxy => requests.exceptions.SSLError:
+                                (47) id = streaming_client.get_user(username="0xabcdef123").data.id
+                                TODO: add error handling / raise no proxy exception
+
+TODO: set proxy for tweepy
+TODO: dockerize script
