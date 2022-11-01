@@ -4,10 +4,7 @@ class Fields:
         "geo.place_id",
     ]
 
-    media_fields = [
-        "media_key",
-        "url",
-    ]
+    media_fields = ["media_key", "url", "variants"]
 
     tweet_fields = [
         "id",
