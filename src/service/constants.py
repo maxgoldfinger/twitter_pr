@@ -17,3 +17,5 @@ class Fields:
         "id",
         "geo",
     ]
+
+    user_fields = ["protected"]
